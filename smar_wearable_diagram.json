@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Archana Murugan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 19.8, "left": -106.2, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -70.8, "left": 80.6, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -112.8,
+      "left": -113.4,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 32.62, "left": 232.72, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -80.4,
+      "left": 186.2,
+      "attrs": { "color": "limegreen" }
+    }
+  ],
+  "connections": [
+    [ "led1:C", "uno:13", "red", [ "v38.4", "h-76.4", "v19.2" ] ],
+    [ "led1:A", "uno:GND.1", "black", [ "v28.8", "h-96" ] ],
+    [ "bz1:2", "uno:8", "red", [ "v19.2", "h143.6", "v38.4" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v0" ] ],
+    [ "imu1:VCC", "uno:5V", "red", [ "v192", "h-259.12" ] ],
+    [ "imu1:GND", "uno:GND.3", "black", [ "v182.4", "h-220.72" ] ],
+    [ "imu1:SDA", "uno:A4", "cyan", [ "v182.4", "h-134.32" ] ],
+    [ "imu1:SCL", "uno:A5", "gold", [ "v0" ] ],
+    [ "led2:A", "uno:GND.1", "black", [ "v19.2", "h-211.2" ] ],
+    [ "led2:C", "uno:12", "red", [ "v57.6", "h-172.4" ] ]
+  ],
+  "dependencies": {}
+}
